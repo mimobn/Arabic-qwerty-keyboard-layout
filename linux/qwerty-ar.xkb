@@ -1,64 +1,82 @@
+// qwerty-ar keyboard layout
+// by BENALIA Mohamed
+
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    name[Group1]= "Arabic (Algeria) - QWERTY";
+
+    key <AE01> { [ 1,                   exclam,             NoSymbol,           NoSymbol,           exclamdown,         onesuperior         ] };
+    key <AE02> { [ 2,                   at,                 NoSymbol,           NoSymbol,           twosuperior,        twosuperior         ] };
+    key <AE03> { [ Arabic_ain,          Arabic_ghain,       NoSymbol,           numbersign,         threesuperior,      threesuperior       ] };
+    key <AE04> { [ 4,                   dollar,             NoSymbol,           NoSymbol,           currency,           sterling            ] };
+    key <AE05> { [ 5,                   percent,            NoSymbol,           NoSymbol,           EuroSign,           EuroSign            ] };
+    key <AE06> { [ 6,                   dead_circumflex,    NoSymbol,           NoSymbol,           onequarter,         onequarter          ] };
+    key <AE07> { [ Arabic_hah,          Arabic_khah,        NoSymbol,           ampersand,          onehalf,            onehalf             ] };
+    key <AE08> { [ 8,                   asterisk,           NoSymbol,           NoSymbol,           threequarters,      threequarters       ] };
+    key <AE09> { [ Arabic_qaf,          parenleft,          NoSymbol,           NoSymbol,           0x100201c,          0x100201c           ] };
+    key <AE10> { [ 0,                   parenright,         NoSymbol,           NoSymbol,           0x100201d,          0x100201d           ] };
+    key <AE11> { [ minus,               underscore,         NoSymbol,           NoSymbol,           yen,                yen                 ] };
+    key <AE12> { [ equal,               plus,               NoSymbol,           NoSymbol,           multiply,           multiply            ] };
+
+    key <AD01> { [ Arabic_kaf,          Arabic_kaf,         NoSymbol,           NoSymbol                                                    ] };
+    key <AD02> { [ Arabic_waw,          0x1000624,          NoSymbol,           NoSymbol                                                    ] };
+    key <AD03> { [ 3,                   3,                  NoSymbol,           NoSymbol                                                    ] };
+    key <AD04> { [ Arabic_ra,           Arabic_ra,          NoSymbol,           NoSymbol                                                    ] };
+    key <AD05> { [ Arabic_teh,          0x100062b,          NoSymbol,           NoSymbol,           registered,         NoSymbol            ] };
+    key <AD06> { [ Arabic_yeh,          0x1000649,          NoSymbol,           NoSymbol                                                    ] };
+    key <AD07> { [ 7,                   7,                  NoSymbol,           NoSymbol                                                    ] };
+    key <AD08> { [ 0x1000625,           0x1000626,          NoSymbol,           NoSymbol                                                    ] };
+    key <AD09> { [ 9,                   9,                  NoSymbol,           NoSymbol                                                    ] };
+    key <AD10> { [ 0x1000621,           0x1000622,          NoSymbol,           NoSymbol                                                    ] };
+    key <AD11> { [ bracketleft,         braceleft,          Escape,             NoSymbol,           0x10000ab,          NoSymbol            ] };
+    key <AD12> { [ bracketright,        braceright,         0x10001d,           NoSymbol,           0x10000bb,          NoSymbol            ] };
+
+    key <AC01> { [ Arabic_alef,         0x1000623,          NoSymbol,           NoSymbol                                                    ] };
+    key <AC02> { [ Arabic_seen,         Arabic_sheen,       NoSymbol,           NoSymbol                                                    ] };
+    key <AC03> { [ Arabic_dal,          0x1000630,          NoSymbol,           NoSymbol                                                    ] };
+    key <AC04> { [ Arabic_feh,          Arabic_feh,         NoSymbol,           NoSymbol                                                    ] };
+    key <AC05> { [ 0x1000629,           0x1000629,          NoSymbol,           NoSymbol                                                    ] };
+    key <AC06> { [ Arabic_heh,          Arabic_heh,         NoSymbol,           NoSymbol                                                    ] };
+    key <AC07> { [ Arabic_jeem,         Arabic_jeem,        NoSymbol,           NoSymbol                                                    ] };
+    key <AC08> { [ Arabic_kaf,          Arabic_kaf,         NoSymbol,           NoSymbol                                                    ] };
+    key <AC09> { [ Arabic_lam,          Arabic_lam,         NoSymbol,           NoSymbol,           oslash,             Oslash              ] };
+    key <AC10> { [ semicolon,           colon,              NoSymbol,           NoSymbol,           paragraph,          degree              ] };
+    key <AC11> { [ dead_acute,          dead_diaeresis,     NoSymbol,           NoSymbol,           acute,              diaeresis           ] };
+
+    key <AB01> { [ 0x1000632,           0x1000632,          NoSymbol,           NoSymbol                                                    ] };
+    key <AB02> { [ 0x1000637,           0x1000638,          NoSymbol,           NoSymbol                                                    ] };
+    key <AB03> { [ 0x1000635,           0x1000636,          NoSymbol,           NoSymbol,           copyright,          cent                ] };
+    key <AB04> { [ Arabic_feh,          Arabic_feh,         NoSymbol,           NoSymbol                                                    ] };
+    key <AB05> { [ Arabic_beh,          Arabic_beh,         NoSymbol,           NoSymbol                                                    ] };
+    key <AB06> { [ Arabic_noon,         Arabic_noon,        NoSymbol,           NoSymbol                                                    ] };
+    key <AB07> { [ Arabic_meem,         Arabic_meem,        NoSymbol,           NoSymbol                                                    ] };
+    key <AB08> { [ comma,               less,               NoSymbol,           NoSymbol                                                    ] };
+    key <AB09> { [ period,              greater,            NoSymbol,           NoSymbol                                                    ] };
+    key <AB10> { [ slash,               0x100061f,          NoSymbol,           NoSymbol,           questiondown,       NoSymbol            ] };
+
+    key <BKSL> { [ backslash,           bar,                0x10001c,           NoSymbol,           notsign,            brokenbar           ] };
+    key <TLDE> { [ dead_grave,          dead_tilde,         NoSymbol,           NoSymbol                                                    ] };
+    key <LSGT> { [ backslash,           bar,                0x10001c,           NoSymbol                                                    ] };
+    key <SPCE> { [ space,               space,              space,              NoSymbol                                                    ] };
+
+    include "level3(ralt_switch)"
+};
+
 partial alphanumeric_keys
-xkb_symbols "kuwarty" {
+xkb_symbols "deadkeys" {
+    include "ara(basic)"
 
-    name[Group1]= "Arabic - كوارتي";
+    name[Group1]= "Arabic (Algeria) - QWERTY with dead keys";
+};
 
-    // Row 1: Numbers and symbols
-    key <AE01> { [ 0x0031, exclam, 0x00a1, 0x00b9 ] }; // 1, !, Inverted !
-    key <AE02> { [ 0x0032, at, 0x00b2, 0x00b2 ] };     // 2, @, Superscript 2
-    key <AE03> { [ 0x0639, 0x063A, numbersign, 0x00b3 ] }; // Ain, Ghain, #, Superscript 3
-    key <AE04> { [ 0x0034, dollar, 0x00a4, 0x00a3 ] };     // 4, $, Currency, Pound
-    key <AE05> { [ 0x0035, percent, 0x20ac, 0x20ac ] };    // 5, %, Euro
-    key <AE06> { [ 0x0036, asciicircum, 0x00bc, 0x00bc ] }; // 6, ^, ¼
-    key <AE07> { [ 0x062D, 0x062E, ampersand, 0x00bd ] };   // Hah, Khah, &, ½
-    key <AE08> { [ 0x0038, asterisk, 0x00be, 0x00be ] };    // 8, *, ¾
-    key <AE09> { [ 0x0642, parenleft, 0x2018, 0x2018 ] };  // Qaf, (, ‘
-    key <AE10> { [ 0x0030, parenright, 0x2019, 0x2019 ] }; // 0, ), ’
-    key <AE11> { [ minus, underscore, 0x00a5, 0x00a5 ] };  // -, _, Yen
-    key <AE12> { [ equal, plus, 0x00d7, 0x00d7 ] };        // =, +, Multiplication
+partial alphanumeric_keys
+xkb_symbols "nodeadkeys" {
+    include "ara(basic)"
 
-    // Row 2: QWERTY row
-    key <AD01> { [ 0x0643, 0x0643 ] }; // Kaf
-    key <AD02> { [ 0x0648, 0x0624 ] }; // Waw, Waw with Hamza
-    key <AD03> { [ 0x0033, 0x0033 ] }; // 3, 3
-    key <AD04> { [ 0x0631, 0x0631 ] }; // Reh
-    key <AD05> { [ 0x062A, 0x062B, 0x00ae ] }; // Teh, Theh, Registered
-    key <AD06> { [ 0x064A, 0x0649 ] }; // Yeh, Alef Maksura
-    key <AD07> { [ 0x0037, 0x0037 ] }; // 7, 7
-    key <AD08> { [ 0x0625, 0x0626 ] }; // Alef with Hamza Below, Yeh with Hamza
-    key <AD09> { [ 0x0039, 0x0039 ] }; // 9, 9
-    key <AD10> { [ 0x0621, 0x0622 ] }; // Hamza, Alef with Madda
-    key <AD11> { [ bracketleft, braceleft, Escape, 0x00ab ] }; // [, {, ESC, «
-    key <AD12> { [ bracketright, braceright, 0x001d, 0x00bb ] }; // ], }, <none>, »
+    name[Group1]= "Arabic (Algeria) - QWERTY no dead keys";
 
-    // Row 3: ASDF row
-    key <AC01> { [ 0x0627, 0x0623 ] }; // Alef, Alef with Hamza
-    key <AC02> { [ 0x0633, 0x0634 ] }; // Seen, Sheen
-    key <AC03> { [ 0x062F, 0x0630 ] }; // Dal, Thal
-    key <AC04> { [ 0x0641, 0x0641 ] }; // Feh
-    key <AC05> { [ 0x0629, 0x0629 ] }; // Teh Marbuta
-    key <AC06> { [ 0x0647, 0x0647 ] }; // Heh
-    key <AC07> { [ 0x062C, 0x062C ] }; // Jeem
-    key <AC08> { [ 0x0643, 0x0643 ] }; // Kaf
-    key <AC09> { [ 0x0644, 0x0644, 0x00f8, 0x00d8 ] }; // Lam, Lam, ø, Ø
-    key <AC10> { [ semicolon, colon, 0x00b6, 0x00b0 ] }; // ;, :, ¶, °
-    key <AC11> { [ apostrophe, quotedbl, 0x00b4, 0x00a8 ] }; // ', ", ´, ¨
-    key <TLDE> { [ grave, asciitilde ] }; // `, ~
-
-    // Row 4: ZXCV row
-    key <LSGT> { [ backslash, bar, 0x001c ] }; // \, |
-    key <AB01> { [ 0x0632, 0x0632 ] }; // Zain
-    key <AB02> { [ 0x0637, 0x0638 ] }; // Tah, Zah
-    key <AB03> { [ 0x0635, 0x0636, 0x00a9, 0x00a2 ] }; // Sad, Dad, ©, ¢
-    key <AB04> { [ 0x0641, 0x0641 ] }; // Feh
-    key <AB05> { [ 0x0628, 0x0628 ] }; // Beh
-    key <AB06> { [ 0x0646, 0x0646 ] }; // Noon
-    key <AB07> { [ 0x0645, 0x0645 ] }; // Meem
-    key <AB08> { [ comma, less ] }; // , , <
-    key <AB09> { [ period, greater ] }; // . , >
-    key <AB10> { [ slash, 0x061f, 0x00bf ] }; // /, Arabic ?, Inverted ?
-
-    // Spacebar
-    key <SPCE> { [ space, space ] };
-
+    key <AE06> { [ 6,                   asciicircum,        NoSymbol,           NoSymbol,           onequarter,         onequarter          ] };
+    key <AC11> { [ apostrophe,          quotedbl,           NoSymbol,           NoSymbol,           acute,              diaeresis           ] };
+    key <TLDE> { [ grave,               asciitilde,         NoSymbol,           NoSymbol                                                    ] };
 };
