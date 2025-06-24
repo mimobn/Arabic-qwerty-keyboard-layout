@@ -27,5 +27,7 @@ The script:
     **Look for**:
     Name: Arabic - QWERTY-Ar
     Short Name: ar
+    *** ScreenShot:
+![linux](images/linux.png)
 
 4- **Add the layout** — now you can switch between your regular layout and your custom Arabic layout from the system tray or shortcut keys
